@@ -1,1 +1,7 @@
 name,type,direction,description
+antihypertension_all_proba,float,high,Probability of having an antihypertensive effect
+antihypertension_sd_proba,float,high,Probability of having an antihypertensive effect with a domain applicability of the model to synthetic compounds
+antihypertension_np_proba,float,high,Probability of having an antihypertensive effect with a domain applicability of the model to natural products
+ace_inh_proba,float,high,Probability of inhibiting ACE protein
+cc_inh_proba,float,high,Probability of being a CCB (Calcium Channel Blocker)
+at1r_inh_proba,float,high,Probability of being an AT1R blocker

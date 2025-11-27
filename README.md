@@ -2,6 +2,7 @@
 
 This model is built on a manually curated collection of natural products and synthetic derivatives with antihypertension activity, as well as target-specific data. The actives have been curated by the CeDD (University of Buea) and the negatives are added from the decoy sampler eos3e6s. Models are built with LazyQSAR.
 
+This model was incorporated on 2025-11-25.
 
 
 ## Information
@@ -39,8 +40,11 @@ Below are the **Output Columns** of the model:
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `Internal`
+- **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4xb1.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4xb1.zip)
 
 ### Resource Consumption
+- **Model Size (Mb):** `18`
+- **Environment Size (Mb):** `7610`
 
 
 ### References

@@ -2,8 +2,7 @@
 
 This model is built on a manually curated collection of natural products and synthetic derivatives with antihypertension activity, as well as target-specific data. The actives have been curated by the CeDD (University of Buea) and the negatives are added from the decoy sampler eos3e6s. Models are built with LazyQSAR.
 
-This model was incorporated on 2025-11-25.
-
+This model was incorporated on 2025-11-25.Last packaged on 2025-11-27.
 
 ## Information
 ### Identifiers
@@ -40,12 +39,19 @@ Below are the **Output Columns** of the model:
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `Internal`
+- **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos4xb1](https://hub.docker.com/r/ersiliaos/eos4xb1)
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4xb1.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4xb1.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `18`
 - **Environment Size (Mb):** `7610`
+- **Image Size (Mb):** `7529.45`
 
+**Computational Performance (seconds):**
+- 10 inputs: `44.58`
+- 100 inputs: `73.79`
+- 10000 inputs: `1260.92`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/anti-hypertension-cedd](https://github.com/ersilia-os/anti-hypertension-cedd)

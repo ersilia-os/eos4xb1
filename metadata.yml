@@ -2,32 +2,35 @@ Identifier: eos4xb1
 Slug: antihypertension-prediction
 Status: In progress
 Title: Antihypertension prediction
-Description: This model is built on a manually curated collection of natural products
-  and synthetic derivatives with antihypertension activity, as well as target-specific data. The actives have been
-  curated by the CeDD (University of Buea) and the negatives are added from the decoy
-  sampler eos3e6s. Models are built with LazyQSAR.
+Description: This model is built on a manually curated collection of natural 
+  products and synthetic derivatives with antihypertension activity, as well as 
+  target-specific data. The actives have been curated by the CeDD (University of
+  Buea) and the negatives are added from the decoy sampler eos3e6s. Models are 
+  built with LazyQSAR.
 Deployment:
-- Local
+  - Local
 Source: Local
 Source Type: Internal
 Task: Annotation
 Subtask: Activity prediction
 Input:
-- Compound
+  - Compound
 Input Dimension: 1
 Output:
-- Score
+  - Score
 Output Dimension: 6
 Output Consistency: Fixed
-Interpretation: 'Probability of antihypertensive activity (general or target-specific)'
+Interpretation: Probability of antihypertensive activity (general or 
+  target-specific)
 Tag:
-- Therapeutic indication
+  - Therapeutic indication
 Biomedical Area:
-- Any
+  - Any
 Target Organism:
-- Homo sapiens
+  - Homo sapiens
 Publication Type: Other
 Publication Year: 2025
 Publication: https://ersilia.io
 Source Code: https://github.com/ersilia-os/anti-hypertension-cedd
 License: GPL-3.0-or-later
+Incorporation Date: '2025-11-25'

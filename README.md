@@ -1,6 +1,6 @@
 # Antihypertension prediction
 
-This model is built on a manually curated collection of natural products and synthetic derivatives with antihypertension activity, as well as target-specific data. The actives have been curated by the CeDD (University of Buea) and the negatives are added from the decoy sampler eos3e6s. Models are built with LazyQSAR.
+Estimates antihypertensive potential both overall and against three specific mechanisms: angiotensin-converting enzyme inhibition, calcium channel blockade and angiotensin II receptor antagonism. Separate outputs distinguish natural products from synthetic derivatives, reflecting how the underlying collection was assembled. Actives were manually curated by the Centre for Drug Discovery at the University of Buea, giving coverage of natural product chemistry from African medicinal plants that public databases represent poorly.
 
 This model was incorporated on 2025-11-25.Last packaged on 2025-11-27.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2025-11-25.Last packaged on 2025-11-27.
 ### Output
 - **Output Dimension:** `6`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of antihypertensive activity (general or target-specific)
+- **Interpretation:** Probabilities of antihypertensive activity overall and through ACE, calcium channel and AT1R mechanisms.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |

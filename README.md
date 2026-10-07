@@ -1,6 +1,6 @@
 # Antihypertension prediction
 
-Estimates antihypertensive potential both overall and against three specific mechanisms: angiotensin-converting enzyme inhibition, calcium channel blockade and angiotensin II receptor antagonism. Separate outputs distinguish natural products from synthetic derivatives, reflecting how the underlying collection was assembled. Actives were manually curated by the Centre for Drug Discovery at the University of Buea, giving coverage of natural product chemistry from African medicinal plants that public databases represent poorly.
+Scores molecules for antihypertensive potential, overall and through three mechanisms, angiotensin-converting enzyme inhibition, calcium channel blockade and angiotensin II receptor antagonism, with separate models for natural products and for synthetic derivatives. Ersilia trained the six LazyQSAR classifiers for the Centre for Drug Discovery at the University of Buea, whose team curated the actives. Negatives are property-matched ChEMBL decoys at about ten per active rather than measured inactives, so the scores rank candidates instead of estimating real hit rates.
 
 This model was incorporated on 2025-11-25.Last packaged on 2025-11-27.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2025-11-25.Last packaged on 2025-11-27.
 ### Output
 - **Output Dimension:** `6`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probabilities of antihypertensive activity overall and through ACE, calcium channel and AT1R mechanisms.
+- **Interpretation:** Probability of antihypertensive activity overall, within natural product and synthetic subsets, and via ACE, calcium channel or AT1R mechanisms.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |

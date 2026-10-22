@@ -2,7 +2,7 @@
 
 Scores molecules for antihypertensive potential, overall and through three mechanisms, angiotensin-converting enzyme inhibition, calcium channel blockade and angiotensin II receptor antagonism, with separate models for natural products and for synthetic derivatives. Ersilia trained the six LazyQSAR classifiers for the Centre for Drug Discovery at the University of Buea, whose team curated the actives. Negatives are property-matched ChEMBL decoys at about ten per active rather than measured inactives, so the scores rank candidates instead of estimating real hit rates.
 
-This model was incorporated on 2025-11-25.Last packaged on 2025-11-27.
+This model was incorporated on 2025-11-25.Last packaged on 2026-10-22.
 
 ## Information
 ### Identifiers
@@ -46,12 +46,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `68`
 - **Environment Size (Mb):** `7511`
-- **Image Size (Mb):** `7529.45`
+- **Image Size (Mb):** `7641.69`
 
 **Computational Performance (seconds):**
-- 10 inputs: `44.58`
-- 100 inputs: `73.79`
-- 10000 inputs: `1260.92`
+- 10 inputs: `42.79`
+- 100 inputs: `35.23`
+- 10000 inputs: `939.27`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/anti-hypertension-cedd](https://github.com/ersilia-os/anti-hypertension-cedd)

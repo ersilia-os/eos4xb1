@@ -1,38 +1,34 @@
 import os
-import csv
 import sys
-from lazyqsar.qsar import LazyBinaryQSAR
 
-# parse arguments
+from ersilia_pack_utils.core import read_smiles, write_out
+from lazyqsar.api.classifier_predict import predict
+
 input_file = sys.argv[1]
 output_file = sys.argv[2]
 
-# current file directory
 root = os.path.dirname(os.path.abspath(__file__))
+checkpoints = os.path.abspath(os.path.join(root, "..", "..", "checkpoints"))
 
-MODELPATH = os.path.join(root, "..", "..", "checkpoints")
+MODELS = {
+    "antihypertension_all_rank": "allmols_eos3e6snegs",
+    "antihypertension_sd_rank": "sd_eos3e6snegs",
+    "antihypertension_np_rank": "np_eos3e6snegs",
+    "ace_inh_rank": "ACE_eos3e6snegs",
+    "cc_inh_rank": "CCBs_eos3e6snegs",
+    "at1r_inh_rank": "AT1RBs_eos3e6snegs",
+}
 
-models = ["allmols_eos3e6snegs", "sd_eos3e6snegs", "np_eos3e6snegs", "ACE_eos3e6snegs", "CCBs_eos3e6snegs", "AT1RBs_eos3e6snegs"]
+_, smiles_list = read_smiles(input_file)
 
-# read SMILES from .csv file, assuming one column with header
-with open(input_file, "r") as f:
-    reader = csv.reader(f)
-    next(reader)  # skip header
-    smiles_list = [r[0] for r in reader]
+outputs, header = predict(
+    {name: os.path.join(checkpoints, folder) for name, folder in MODELS.items()},
+    smiles=smiles_list,
+    predict_type="rank",
+)
 
-# run model
-y_preds = {}
-for m in models:
-    model_folder = os.path.join(MODELPATH, f"{m}")
-    model = LazyBinaryQSAR.load(f"{model_folder}")
-    y_pred = model.predict_proba(smiles_list=smiles_list)[:, 1]
-    y_preds[m]=y_pred
+# Ersilia reports missing values as empty cells; csv.writer would otherwise
+# render an unparseable SMILES as the string "nan".
+outputs = [["" if v is None or v != v else v for v in row] for row in outputs]
 
-header = list(y_preds.keys())
-
-# write output in a .csv file
-with open(output_file, "w") as f:
-    writer = csv.writer(f)
-    writer.writerow(["antihypertension_all_proba", "antihypertension_sd_proba", "antihypertension_np_proba", "ace_inh_proba", "cc_inh_proba", "at1r_inh_proba"]) 
-    for o1, o2, o3, o4,o5,o6 in zip(*(y_preds[m].tolist() for m in header)):
-        writer.writerow([o1, o2, o3, o4,o5,o6])
+write_out(outputs, header, output_file)

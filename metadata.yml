@@ -23,8 +23,10 @@ Output:
   - Score
 Output Dimension: 6
 Output Consistency: Fixed
-Interpretation: Probability of antihypertensive activity overall, within natural product
-  and synthetic subsets, and via ACE, calcium channel or AT1R mechanisms.
+Interpretation: Rank score of predicted antihypertensive activity, overall and within
+  the natural product and synthetic subsets, and via ACE, calcium channel or AT1R
+  mechanisms. Calibrated against 50K compounds from the Ersilia reference library, so a
+  rank above 0.65 beats 99% of them.
 Tag:
   - Therapeutic indication
 Biomedical Area:

@@ -23,17 +23,17 @@ This model was incorporated on 2025-11-25.Last packaged on 2025-11-27.
 ### Output
 - **Output Dimension:** `6`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of antihypertensive activity overall, within natural product and synthetic subsets, and via ACE, calcium channel or AT1R mechanisms.
+- **Interpretation:** Rank score of predicted antihypertensive activity, overall and within the natural product and synthetic subsets, and via ACE, calcium channel or AT1R mechanisms. Calibrated against 50K compounds from the Ersilia reference library, so a rank above 0.65 beats 99% of them.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| antihypertension_all_proba | float | high | Probability of having an antihypertensive effect |
-| antihypertension_sd_proba | float | high | Probability of having an antihypertensive effect with a domain applicability of the model to synthetic compounds |
-| antihypertension_np_proba | float | high | Probability of having an antihypertensive effect with a domain applicability of the model to natural products |
-| ace_inh_proba | float | high | Probability of inhibiting ACE protein |
-| cc_inh_proba | float | high | Probability of being a CCB (Calcium Channel Blocker) |
-| at1r_inh_proba | float | high | Probability of being an AT1R blocker |
+| antihypertension_all_rank | float | high | Rank score of the compound's predicted antihypertensive activity from the model trained on all compounds. Calibrated against 50K compounds from the Ersilia reference library so that a score of 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| antihypertension_sd_rank | float | high | Rank score of the compound's predicted antihypertensive activity from the model trained on synthetic derivatives. Calibrated against 50K compounds from the Ersilia reference library so that a score of 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| antihypertension_np_rank | float | high | Rank score of the compound's predicted antihypertensive activity from the model trained on natural products. Calibrated against 50K compounds from the Ersilia reference library so that a score of 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| ace_inh_rank | float | high | Rank score of the compound's predicted inhibition of the angiotensin-converting enzyme (ACE). Calibrated against 50K compounds from the Ersilia reference library so that a score of 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| cc_inh_rank | float | high | Rank score of the compound's predicted calcium channel blocking activity (CCB). Calibrated against 50K compounds from the Ersilia reference library so that a score of 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| at1r_inh_rank | float | high | Rank score of the compound's predicted angiotensin II receptor (AT1R) blocking activity. Calibrated against 50K compounds from the Ersilia reference library so that a score of 0.65 is better than 99% of them. Recommended threshold: 0.65. |
 
 
 ### Source and Deployment

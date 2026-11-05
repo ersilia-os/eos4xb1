@@ -131,3 +131,9 @@ dmypy.json
 
 # eosvc local bookkeeping (access policy lock)
 .eosvc/
+
+# fit/ lives in eosvc; keep only the folder skeleton and README in git
+model/framework/fit/**
+!model/framework/fit/**/
+!model/framework/fit/**/.gitkeep
+!model/framework/fit/README.md

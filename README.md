@@ -2,7 +2,8 @@
 
 Scores molecules for antihypertensive potential, overall and through three mechanisms, angiotensin-converting enzyme inhibition, calcium channel blockade and angiotensin II receptor antagonism, with separate models for natural products and for synthetic derivatives. Ersilia trained the six LazyQSAR classifiers for the Centre for Drug Discovery at the University of Buea, whose team curated the actives. Negatives are property-matched ChEMBL decoys at about ten per active rather than measured inactives, so the scores rank candidates instead of estimating real hit rates.
 
-This model was incorporated on 2025-11-25.Last packaged on 2026-10-22.
+This model was incorporated on 2025-11-25.
+Last packaged on 2026-10-22.
 
 ## Information
 ### Identifiers
@@ -42,6 +43,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos4xb1](https://hub.docker.com/r/ersiliaos/eos4xb1)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4xb1.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4xb1.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos4xb1_v2.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos4xb1_v2.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `68`

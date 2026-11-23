@@ -1,6 +1,6 @@
 # Antihypertension prediction
 
-Scores molecules for antihypertensive potential, overall and through three mechanisms, angiotensin-converting enzyme inhibition, calcium channel blockade and angiotensin II receptor antagonism, with separate models for natural products and for synthetic derivatives. Ersilia trained the six LazyQSAR classifiers for the Centre for Drug Discovery at the University of Buea, whose team curated the actives. Negatives are property-matched ChEMBL decoys at about ten per active rather than measured inactives, so the scores rank candidates instead of estimating real hit rates.
+Scores molecules for antihypertensive potential, overall and through angiotensin-converting enzyme inhibition, calcium channel blockade and angiotensin II receptor antagonism, with separate models for natural products and synthetic derivatives. Ersilia trained the six LazyQSAR classifiers for the Centre for Drug Discovery at the University of Buea, whose team curated the actives. Five-fold out-of-fold AUROC is above 0.96 for all six, but negatives are property-matched ChEMBL decoys rather than measured inactives, so this overstates real performance.
 
 This model was incorporated on 2025-11-25.
 Last packaged on 2026-10-22.

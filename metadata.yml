@@ -40,7 +40,7 @@ Source Code: https://github.com/ersilia-os/anti-hypertension-cedd
 License: GPL-3.0-or-later
 Contributor: GemmaTuron
 Incorporation Date: '2025-11-25'
-Last Packaging Date: '2026-10-22'
+Last Packaging Date: '2026-11-23'
 Release: v2.0.1
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4xb1.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos4xb1
@@ -50,9 +50,9 @@ Docker Architecture:
 Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos4xb1_v2.sif
 Model Size: 98.0
 Environment Size: 6954.0
-Image Size: 7641.69
-Computational Performance 1: 42.79
-Computational Performance 2: 32.5
-Computational Performance 3: 35.23
-Computational Performance 4: 197.1
-Computational Performance 5: 939.27
+Image Size: 3304.39
+Computational Performance 1: 36.15
+Computational Performance 2: 28.07
+Computational Performance 3: 43.92
+Computational Performance 4: 205.27
+Computational Performance 5: 914.71

@@ -3,7 +3,7 @@
 Scores molecules for antihypertensive potential, overall and through angiotensin-converting enzyme inhibition, calcium channel blockade and angiotensin II receptor antagonism, with separate models for natural products and synthetic derivatives. Ersilia trained the six LazyQSAR classifiers for the Centre for Drug Discovery at the University of Buea, whose team curated the actives. Five-fold out-of-fold AUROC is above 0.96 for all six, but negatives are property-matched ChEMBL decoys rather than measured inactives, so this overstates real performance.
 
 This model was incorporated on 2025-11-25.
-Last packaged on 2026-10-22.
+Last packaged on 2026-11-23.
 
 ## Information
 ### Identifiers
@@ -48,12 +48,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `98`
 - **Environment Size (Mb):** `6954`
-- **Image Size (Mb):** `7641.69`
+- **Image Size (Mb):** `3304.39`
 
 **Computational Performance (seconds):**
-- 10 inputs: `42.79`
-- 100 inputs: `35.23`
-- 10000 inputs: `939.27`
+- 10 inputs: `36.15`
+- 100 inputs: `43.92`
+- 10000 inputs: `914.71`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/anti-hypertension-cedd](https://github.com/ersilia-os/anti-hypertension-cedd)
